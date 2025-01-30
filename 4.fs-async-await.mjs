@@ -1,0 +1,12 @@
+import { readFile } from 'node:fs/promises';
+
+// Tambien asincrono pero secuencial
+console.log('Leyendo primer archivo..');
+const text = await readFile('./file.txt', 'utf-8')
+console.log('Primer texto: ', text);
+
+console.log('Haciendo otra operación');
+
+console.log('Leyendo segundo archivo..');
+const secondText = await readFile('./file2.txt', 'utf-8')
+console.log('Segundo texto: ', secondText);
